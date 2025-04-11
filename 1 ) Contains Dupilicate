@@ -8,3 +8,4 @@ return False
 
 Optimal Solution :
  return len(nums) != len(set(nums))
+gi
