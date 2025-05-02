@@ -1,4 +1,4 @@
-Brute Force Solution:
+"""Brute Force Solution:
 n=len(nums)
 for i in range(n):
    for j in range(i+1,n):
@@ -7,5 +7,4 @@ for i in range(n):
 return False
 
 Optimal Solution :
- return len(nums) != len(set(nums))
-gi
+ return len(nums) != len(set(nums)"""

@@ -1,0 +1,43 @@
+"""# Brute Force
+class Solution:
+  def findDisappearedNumbers(self, nums):
+    n = len(nums)
+    t = []
+    for i in range(1, n + 1):
+      flag = False
+      for num in nums:
+        if num == i:
+          flag = True
+          break
+      if not flag:
+        t.append(i)
+    return t
+
+
+# Optimized 1 (convert to negative)
+class Solution:
+  def findDisappearedNumbers(self, nums):
+    n = len(nums)
+    t = []
+    for num in nums:
+      ind = abs(num) - 1
+      nums[ind] = -abs(nums[ind])
+    for i in range(n):
+      if nums[i] > 0:
+        t.append(i + 1)
+    return t
+
+
+# Optimized 2 (swapping elements)
+class Solution:
+  def findDisappearedNumbers(self, a):
+    n = len(a)
+    ans = []
+    for i in range(n):
+      while a[a[i] - 1] != a[i]:
+        a[a[i] - 1], a[i] = a[i], a[a[i] - 1]
+    for i in range(n):
+      if a[i] != i + 1:
+        ans.append(i + 1)
+    return ans
+"""
